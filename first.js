@@ -1,6 +1,6 @@
 function del(id)
 {
-    fetch(`http://3.27.121.19:8000/api/student/${id}/delete`,{
+    fetch(`http://3.27.133.149/api/student/${id}/delete`,{
         method : 'DELETE'
     })
 .then(res => res.json())
@@ -48,7 +48,7 @@ editForm.addEventListener('submit', async function (e) {
         phone: editForm.phone.value,
     }
     record=JSON.stringify(data);
-    const response = await fetch(`http://3.27.121.19:8000/api/student/${data.id}/edit`, {
+    const response = await fetch(`http://3.27.133.149/api/student/${data.id}/edit`, {
         method: 'PUT',
         headers: { 
             'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ editForm.addEventListener('submit', async function (e) {
 });
 
 function update(id){
-    const api_url = `http://127.0.0.1:8000/api/student/${id}/edit`;
+    const api_url = `http://3.27.133.149/api/student/${id}/edit`;
     geteditapi(api_url);
 }
 
@@ -79,7 +79,7 @@ thisForm.addEventListener('submit', async function (e) {
         phone: thisForm.phone.value,
     }
     record=JSON.stringify(data);
-    const response = await fetch('http://3.27.121.19:8000/api/student/', {
+    const response = await fetch('http://3.27.133.149/api/student/', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ thisForm.addEventListener('submit', async function (e) {
 
 // api url
 const api_url =
-	"http://3.27.121.19:8000/api/student/";
+	"http://3.27.133.149/api/student/";
 
 // Defining async function
 async function getapi(url) {
